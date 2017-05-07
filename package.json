@@ -1,0 +1,11 @@
+{
+  "name": "todomvc-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Ueli Kunz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
