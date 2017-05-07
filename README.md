@@ -1,7 +1,8 @@
 # todomvc-server
 
-start with `mkdir -p build && npm start`
+start with `npm start`
 
 # history
 * `yarn add –D babel-cli`
 * `yarn add –D babel-es2015-preset`
+* `yarn add –D nodemon`
