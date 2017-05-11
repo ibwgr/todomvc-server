@@ -2,9 +2,13 @@
 import express from 'express'
 let app = express()
 
-// respond with "hello world" when a GET request is made to the homepage
-app.get('/', function (req, res) {
-  res.send('hello world')
+app.get('/items', function (req, res) {
+  let items = [{
+    id: new Date().getTime(),
+    title: 'Putzen'
+  }]
+  let payload = JSON.stringify(items)
+  res.send(payload)
 })
 
 app.listen(3100)
