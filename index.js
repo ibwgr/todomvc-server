@@ -1,13 +1,11 @@
 'use strict'
 import express from 'express'
+import fs from 'fs'
 let app = express()
 
 app.get('/items', function (req, res) {
-  let items = [{
-    id: new Date().getTime(),
-    title: 'Putzen'
-  }]
-  let payload = JSON.stringify(items)
+  let items = fs.readFileSync('data.json', 'utf8')
+  let payload = JSON.parse(items)
   res.send(payload)
 })
 
