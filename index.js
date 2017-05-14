@@ -1,10 +1,12 @@
 'use strict'
 import express from 'express'
 import fs from 'fs'
+import cors from 'cors'
 import bodyParser from 'body-parser'
 
 let app = express()
 app.use(bodyParser.json())
+app.use(cors())
 
 app.get('/items', function (req, res) {
   let items = fs.readFileSync('data.json', 'utf8')
