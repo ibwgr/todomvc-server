@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "node_modules/.bin/babel-node --presets=es2015",
+    "debug": "node_modules/.bin/babel-node --presets=es2015 --debug-brk=8010 index.js",
     "start": "nodemon --exec npm run build -- index.js"
   },
   "author": "Ueli Kunz",
@@ -17,6 +18,7 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
+    "node-inspector": "^1.1.1",
     "nodemon": "^1.11.0"
   }
 }
