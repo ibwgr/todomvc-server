@@ -6,7 +6,10 @@ import bodyParser from 'body-parser'
 
 let app = express()
 app.use(bodyParser.json())
-app.use(cors())
+app.use(cors({
+  origin: 'http://localhost:8008',
+  credentials: true
+}))
 
 app.get('/items', function (req, res) {
   let items = fs.readFileSync('data.json', 'utf8')
@@ -29,7 +32,7 @@ app.post('/items', function (req, res) {
   let payload = req.body
   let items = fs.readFileSync('data.json', 'utf8')
   let db = JSON.parse(items)
-
+  
   db.push(payload)
 
   fs.writeFileSync('data.json', JSON.stringify(db), {encoding: 'utf8'})
