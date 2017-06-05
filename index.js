@@ -11,8 +11,18 @@ app.use(cors())
 app.get('/items', function (req, res) {
   let items = fs.readFileSync('data.json', 'utf8')
   let payload = JSON.parse(items)
-  
   res.json(payload)
+})
+
+app.delete('/items/:id/', function (req, res) {
+  let items = fs.readFileSync('data.json', 'utf8')
+  let db = JSON.parse(items)
+  let idx = db.findIndex((item)=>item.id === req.body.id);
+  db.splice(idx, 1)
+
+  fs.writeFileSync('data.json', JSON.stringify(db), {encoding: 'utf8'})
+
+  res.json({})
 })
 
 app.post('/items', function (req, res) {
