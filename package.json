@@ -4,9 +4,9 @@
   "description": "TodoMVC Server API based on node express",
   "main": "index.js",
   "scripts": {
-    "build": "node_modules/.bin/babel-node --presets=es2015",
+    "build": "./node_modules/.bin/babel index.js -d build",
     "debug": "node_modules/.bin/babel-node --presets=es2015 --debug-brk=8010 index.js",
-    "start": "nodemon --exec npm run build -- index.js",
+    "start": "nodemon --exec node_modules/.bin/babel-node --presets=es2015 -- index.js",
     "test": "echo 'no tests'"
   },
   "author": "Ueli Kunz",

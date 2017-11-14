@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ibwgr/todomvc-server.svg?branch=master)](https://travis-ci.org/ibwgr/todomvc-server)
+
 # todomvc-server
 
 start with `npm run start`
