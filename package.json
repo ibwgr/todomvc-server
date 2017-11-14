@@ -1,12 +1,13 @@
 {
   "name": "todomvc-server",
   "version": "1.0.2",
-  "description": "",
+  "description": "TodoMVC Server API based on node express",
   "main": "index.js",
   "scripts": {
     "build": "node_modules/.bin/babel-node --presets=es2015",
     "debug": "node_modules/.bin/babel-node --presets=es2015 --debug-brk=8010 index.js",
-    "start": "nodemon --exec npm run build -- index.js"
+    "start": "nodemon --exec npm run build -- index.js",
+    "test": "echo 'no tests'"
   },
   "author": "Ueli Kunz",
   "license": "ISC",
