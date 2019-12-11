@@ -5,8 +5,8 @@
 start with `npm run start`
 
 # history
-* `yarn add –D babel-cli`
-* `yarn add –D babel-preset-es2015`
-* `yarn add –D nodemon`
-* `yarn add express`
-* `yarn add body-parser`
+* `npm install --save-dev @babel/cli`
+* `npm install --save-dev @babel/preset-env`
+* `npm install --save-dev nodemon`
+* `npm install express`
+* `npm install body-parser`

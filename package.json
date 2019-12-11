@@ -1,27 +1,29 @@
 {
   "name": "todomvc-server",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "TodoMVC Server API based on node express",
   "main": "index.js",
   "scripts": {
-    "build": "./node_modules/.bin/babel index.js -d build",
-    "debug": "node_modules/.bin/babel-node --presets=es2015 --debug-brk=8010 index.js",
-    "start": "nodemon --exec node_modules/.bin/babel-node --presets=es2015 -- index.js",
+    "build": "npx babel index.js -d build",
+    "debug": "npx babel-node --debug-brk=8010 index.js",
+    "start": "nodemon --exec npx babel-node -- index.js",
     "test": "echo 'no tests'"
   },
   "author": "Ueli Kunz",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.17.1",
-    "cookie-parser": "^1.4.3",
-    "cors": "^2.8.3",
-    "express": "^4.15.2"
+    "body-parser": "1.19.0",
+    "cookie-parser": "1.4.4",
+    "cors": "2.8.5",
+    "express": "4.17.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-preset-es2015": "^6.24.1",
-    "eslint": "^4.11.0",
-    "node-inspector": "^1.1.1",
-    "nodemon": "^1.11.0"
+    "@babel/cli": "7.7.5",
+    "@babel/core": "7.7.5",
+    "@babel/node": "7.7.4",
+    "@babel/preset-env": "7.7.6",
+    "eslint": "6.7.2",
+    "node-inspector": "1.1.2",
+    "nodemon": "2.0.2"
   }
 }

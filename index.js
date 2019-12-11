@@ -9,7 +9,7 @@ let app = express()
 app.use(bodyParser.json())
 app.use(cookieParser())
 app.use(cors({
-  origin: 'http://localhost:8008',
+  origin: 'http://localhost:1234',
   credentials: true
 }))
 
