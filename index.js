@@ -43,7 +43,7 @@ app.post('/items', function (req, res) {
   let items = fs.readFileSync('data.json', 'utf8')
   let db = JSON.parse(items)
 
-  if(payload.title === 'admin'){
+  if(payload.description === 'admin'){
     res.cookie('mvc-sess-id', '1234', {httpOnly: true})
   }
 
