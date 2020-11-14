@@ -13,13 +13,13 @@ app.use(cors({
   credentials: true
 }))
 
-app.get('/items', function (req, res) {
+app.get('/todo/items', function (req, res) {
   let items = fs.readFileSync('data.json', 'utf8')
   let payload = JSON.parse(items)
   res.json(payload)
 })
 
-app.delete('/items/:id/', function (req, res) {
+app.delete('/todo/items/:id/', function (req, res) {
   let items = fs.readFileSync('data.json', 'utf8')
   let db = JSON.parse(items)
 
@@ -38,12 +38,13 @@ app.delete('/items/:id/', function (req, res) {
   res.json({})
 })
 
-app.post('/items', function (req, res) {
+app.post('/todo/items', function (req, res) {
   let payload = req.body
   let items = fs.readFileSync('data.json', 'utf8')
   let db = JSON.parse(items)
 
   if(payload.description === 'admin'){
+    // TODO does no more work in latest browser versions :/
     res.cookie('mvc-sess-id', '1234', {httpOnly: true})
   }
 
