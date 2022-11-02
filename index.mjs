@@ -1,4 +1,3 @@
-'use strict'
 import express from 'express'
 import fs from 'fs'
 import cors from 'cors'
@@ -56,3 +55,4 @@ app.post('/todo/items', function (req, res) {
 })
 
 app.listen(3100)
+console.log('listening on localhost:3100')

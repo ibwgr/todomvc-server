@@ -1,29 +1,28 @@
 {
   "name": "todomvc-server",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "TodoMVC Server API based on node express",
-  "main": "index.js",
+  "main": "index.mjs",
   "scripts": {
-    "build": "npx babel index.js -d build",
-    "debug": "npx babel-node --debug-brk=8010 index.js",
-    "start": "nodemon --exec npx babel-node -- index.js",
+    "build": "node ./index.mjs",
+    "debug": "node --inspect-brk=8010 ./index.mjs",
+    "dev": "nodemon --exec node ./index.mjs",
+    "start": "node ./index.mjs",
     "test": "echo 'no tests'"
+  },
+  "engines": {
+    "node": "19"
   },
   "author": "Ueli Kunz",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "1.19.0",
-    "cookie-parser": "1.4.4",
+    "body-parser": "1.20.1",
+    "cookie-parser": "1.4.6",
     "cors": "2.8.5",
-    "express": "4.17.1"
+    "express": "4.18.2"
   },
   "devDependencies": {
-    "@babel/cli": "7.7.5",
-    "@babel/core": "7.7.5",
-    "@babel/node": "7.7.4",
-    "@babel/preset-env": "7.7.6",
-    "eslint": "6.7.2",
-    "node-inspector": "1.1.2",
-    "nodemon": "2.0.2"
+    "eslint": "6.8.0",
+    "nodemon": "2.0.20"
   }
 }
